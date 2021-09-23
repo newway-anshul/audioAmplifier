@@ -1,0 +1,46 @@
+{
+    "name": "audioAmplifier",
+    "description": "Amplify audio of a video",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons": {
+        "128": "icons/icon128.png",
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png"
+    },
+    "content_scripts": [
+        {
+            "css": [
+                "src/main.css"
+            ],
+            "js": [
+                "src/main.js"
+            ],
+            "match_about_blank": true,
+            "matches": [
+                "\u003Call_urls>"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "browser_action": {
+        "icons": {
+            "128": "icons/icon128.png",
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png"
+        }
+    },
+    "background": {
+        "scripts": [
+            
+        ]
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "unlimitedStorage"
+    ],
+    "web_accessible_resources": [
+        "logos/32/color/*"
+    ]
+}
